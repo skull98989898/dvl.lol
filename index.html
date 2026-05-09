@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dvl - Advanced Extraction System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #050505;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .glow-bg {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.08) 0%, rgba(0,0,0,0) 70%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .hero-title {
+            font-size: 5rem;
+            letter-spacing: -0.02em;
+            line-height: 1;
+            background: linear-gradient(to bottom, #fff 40%, #777 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .server-text {
+            letter-spacing: 0.8em;
+            color: #888;
+            font-size: 0.85rem;
+            margin-top: 1rem;
+            text-transform: uppercase;
+        }
+
+        .card-gradient {
+            background: linear-gradient(145deg, rgba(20, 20, 20, 0.6) 0%, rgba(10, 10, 10, 0.8) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .card-gradient:hover {
+            border-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .popular-badge {
+            background: #ffffff;
+            color: #000;
+            font-size: 0.65rem;
+            font-weight: 800;
+            padding: 4px 12px;
+            border-radius: 4px;
+            letter-spacing: 0.1em;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-glow {
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .btn-glow:hover {
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+            transform: scale(1.02);
+        }
+
+        .icon-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen px-4 py-20">
+    <div class="glow-bg"></div>
+
+    <!-- Header Section -->
+    <header class="text-center mb-16">
+        <h1 class="hero-title font-extrabold">dvl</h1>
+        <p class="server-text font-light">S E R V E R</p>
+        <p class="max-w-md mx-auto mt-8 text-gray-400 text-sm leading-relaxed">
+            Automated extraction and decryption system. Exclusive access. Fully private environment for advanced data management.
+        </p>
+        
+        <button class="mt-12 bg-white text-black font-bold py-3 px-10 rounded text-xs tracking-widest uppercase btn-glow">
+            Login with Discord
+        </button>
+    </header>
+
+    <!-- Pricing Section -->
+    <section class="w-full max-w-5xl">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-2">Simple Pricing</h2>
+            <p class="text-gray-500 text-sm">Pick a plan. Pay with Crypto. Start dumping.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            
+            <!-- 1 Day -->
+            <div class="card-gradient rounded-xl p-8 flex flex-col items-center text-center">
+                <div class="icon-box mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <h3 class="text-xs font-bold tracking-widest text-gray-300 uppercase mb-2">1 Day</h3>
+                <div class="text-4xl font-bold mb-1">$5</div>
+                <div class="text-[10px] text-gray-500 font-bold uppercase tracking-tighter">24 Hours</div>
+            </div>
+
+            <!-- 1 Week -->
+            <div class="card-gradient rounded-xl p-8 flex flex-col items-center text-center">
+                <div class="icon-box mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                </div>
+                <h3 class="text-xs font-bold tracking-widest text-gray-300 uppercase mb-2">1 Week</h3>
+                <div class="text-4xl font-bold mb-1">$20</div>
+                <div class="text-[10px] text-gray-500 font-bold uppercase tracking-tighter">7 Days</div>
+            </div>
+
+            <!-- 1 Month (Popular) -->
+            <div class="card-gradient rounded-xl p-8 flex flex-col items-center text-center relative border-white/20">
+                <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+                    <span class="popular-badge">MOST POPULAR</span>
+                </div>
+                <div class="icon-box mb-6 border-white/20">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                </div>
+                <h3 class="text-xs font-bold tracking-widest text-white uppercase mb-2">1 Month</h3>
+                <div class="text-4xl font-bold mb-1 text-white">$40</div>
+                <div class="text-[10px] text-gray-400 font-bold uppercase tracking-tighter">30 Days</div>
+            </div>
+
+            <!-- Lifetime -->
+            <div class="card-gradient rounded-xl p-8 flex flex-col items-center text-center">
+                <div class="icon-box mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <h3 class="text-xs font-bold tracking-widest text-gray-300 uppercase mb-2">Lifetime</h3>
+                <div class="text-4xl font-bold mb-1">$150</div>
+                <div class="text-[10px] text-gray-500 font-bold uppercase tracking-tighter">Forever</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-24 text-gray-600 text-[10px] tracking-[0.2em] uppercase">
+        &copy; 2024 DVL Systems. All rights reserved.
+    </footer>
+</body>
+</html>
